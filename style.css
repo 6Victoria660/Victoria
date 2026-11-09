@@ -1,0 +1,167 @@
+:root {
+    --bg-color: #F7F6F2;
+    --card-bg: #FFFFFF;
+    --accent-green: #E8EDE8;
+    --text-color: #252B2B;
+    --muted-color: #627C85;
+    --border-color: #D8DDD8;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--accent-green);
+    color: var(--muted-color);
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--muted-color);
+    margin-bottom: 16px;
+}
+
+.hero-desc {
+    font-size: 1rem;
+    color: var(--text-color);
+    max-width: 500px;
+    margin: 0 auto 24px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+}
+
+.btn.primary {
+    background-color: var(--text-color);
+    color: #FFFFFF;
+}
+
+.btn.secondary {
+    background-color: var(--accent-green);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--accent-green);
+    padding-bottom: 8px;
+}
+
+.edu-spec {
+    color: var(--muted-color);
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.lang-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.muted {
+    color: var(--muted-color);
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0 20px;
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 12px;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
